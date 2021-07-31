@@ -37,7 +37,12 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 REM Delete Microsoft Edge shortcut from desktop
 del /f /q "C:\Users\Public\Desktop\Microsoft Edge.lnk"
 
-pause
+REM Disable Meet Now
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /t REG_DWORD /v "HideSCAMeetNow" /d 1 /f
+reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /t REG_DWORD /v "HideSCAMeetNow" /d 1 /f
 
-%SystemRoot%\System32\logoff.exe
+REM Hide parent user name
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /t REG_DWORD /f /d 0 /v parent
 
+taskkill /f /im explorer.exe
+start explorer.exe
