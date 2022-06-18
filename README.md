@@ -14,7 +14,11 @@ This repository contains my scripts tested with Windows 10 21H1 (19043)
 
 Run cmd.exe with administrators rights and execute the command below
 
+**win10.user.settings.cmd**
 ```
 curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
+```
+**win10.disable.data.collection.cmd**
+```
 curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.disable.data.collection.cmd | %SystemRoot%\System32\cmd.exe
 ```
