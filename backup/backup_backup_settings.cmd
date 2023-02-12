@@ -1,7 +1,7 @@
 @echo off 
 
 REM *** Connect network folder *** 
-NET USE \\10.10.20.150\backup\tr_bcs_mk wqNowXZsRi9yEy7p /u:mk_backup
+NET USE \\10.10.20.150\backup\tr_bcs_mk *password* /u:mk_backup
 
 REM *** Prepare vars ***
 set "backup_from=C:\0000\backup"
