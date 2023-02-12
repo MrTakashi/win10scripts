@@ -5,10 +5,12 @@ reg add "HKLM\Software\Policies\Microsoft\Windows\DataCollection" /t REG_DWORD /
 REM Step 2. Stop and disable diagnostic tracking service
 sc stop DiagTrack
 sc config DiagTrack start= disabled
+sc query "DiagTrack"
 
 REM Step 3. Stop and disable dmwappushservice
 sc stop dmwappushservice
 sc config dmwappushservice start= disabled
+sc query "dmwappushservice"
 
 shutdown /r
 
