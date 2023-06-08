@@ -37,23 +37,3 @@ echo "Press Enter to logoff..."
 pause
 
 logoff
-
-REM Delete Microsoft Edge shortcut from desktop
-REM del /f /q "C:\Users\Public\Desktop\Microsoft Edge.lnk"
-
-REM Disable Meet Now
-REM reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /t REG_DWORD /v "HideSCAMeetNow" /d 1 /f
-REM reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /t REG_DWORD /v "HideSCAMeetNow" /d 1 /f
-
-REM Hide Cortana button
-REM reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /t REG_DWORD /v ShowCortanaButton /d 0 /f
-
-REM Hide News and Interests Button
-REM reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Feeds" /t REG_DWORD /v ShellFeedsTaskbarViewMode /d 2 /f
-
-REM Disable Quick Access
-REM reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer" /t REG_DWORD /v HubMode /d 1 /f
-
-REM Disable 3D Objects
-REM reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}" /f
-REM reg delete "HKLM\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}" /f

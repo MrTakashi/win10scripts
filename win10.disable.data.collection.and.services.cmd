@@ -19,21 +19,7 @@ sc stop wuauserv
 sc config wuauserv start= disabled
 sc query "wuauserv"
 
-
-
-REM sc query "DiagTrack"
-REM sc query "dmwappushservice"
-REM sc query "iphlpsvc"
-REM sc query "Spooler"
-REM sc query "ShellHWDetection"
-REM sc query "Themes"
-REM sc query "MapsBroker"
-REM sc query "wscsvc"
-REM sc query "WSearch"
-REM sc query "edgeupdate"
-REM sc query "wuauserv"
-
-echo "Press Enter to reboot system..."
+echo "Press Enter to reboot the system..."
 
 pause
 
