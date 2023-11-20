@@ -12,6 +12,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccou
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /t REG_DWORD /f /d 0 /v kids
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /t REG_DWORD /f /d 0 /v music
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /t REG_DWORD /f /d 0 /v printer
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /t REG_DWORD /f /d 0 /v parent
 
 
 REM PasswordExpires=False
@@ -22,5 +23,6 @@ wmic UserAccount where Name='kids'  set PasswordExpires=False
 wmic UserAccount where Name='music' set PasswordExpires=False
 REM wmic UserAccount where Name='Darya' set PasswordExpires=False
 wmic UserAccount where Name='printer' set PasswordExpires=False
+wmic UserAccount where Name='parent' set PasswordExpires=False
 
 pause
