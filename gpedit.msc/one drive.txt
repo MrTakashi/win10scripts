@@ -1,0 +1,12 @@
+gpedit
+
+16. OneDrive
+To turn off OneDrive in your organization:
+
+Enable the Group Policy:
+
+Computer Configuration 
+> Administrative Templates 
+> Windows Components 
+> OneDrive 
+> Prevent the usage of OneDrive for file storage
