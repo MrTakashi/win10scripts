@@ -1,4 +1,4 @@
-;
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/office/C2R/install_my_settings.cmd | %SystemRoot%\System32\cmd.exe
 
 echo [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\General]
 echo "DisableBootToOfficeStart"=dword:00000001
