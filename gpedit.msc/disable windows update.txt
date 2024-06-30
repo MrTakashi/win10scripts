@@ -1,0 +1,94 @@
+gpedit
+
+Set the Group Policy
+Computer Configuration 
+> Administrative Templates 
+> Windows Components 
+> Windows Update 
+> Do not connect to any Windows Update Internet locations to Enabled
+
+-and-
+Set the Group Policy
+Computer Configuration 
+> Administrative Templates 
+> Windows Components 
+> Windows Update 
+> Specify intranet Microsoft update service location to Enabled and ensure all Option settings (Intranet Update Service, Intranet Statistics Server, Alternate Download Server) are set to " "
+
+-and-
+Set the Group Policy
+Computer Configuration 
+> Administrative Templates 
+> System 
+> Internet Communication Management 
+> Internet Communication Settings 
+> Turn off access to all Windows Update features to Enabled
+
+-and-
+Set the
+Group Policy User Configuration 
+> Administrative Templates 
+> Windows Components 
+> Windows Update 
+> Remove access to use all Windows Update features to Enabled and then set Computer Configurations to 0 (zero).
+
+-OR-
+
+29. Windows Update
+You can turn off Windows Update by setting the following registry entries:
+
+Add a REG_DWORD value named DoNotConnectToWindowsUpdateInternetLocations to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate and set the value to 1.
+-and-
+Add a REG_DWORD value named DisableWindowsUpdateAccess to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate and set the value to 1.
+-and-
+Add a REG_SZ value named WUServer to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate and ensure it is blank with a space character " ".
+-and-
+Add a REG_SZ value named WUStatusServer to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate and ensure it is blank with a space character " ".
+-and-
+Add a REG_SZ value named UpdateServiceUrlAlternate to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate and ensure it is blank with a space character " ".
+-and-
+Add a REG_DWORD value named UseWUServer to HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WindowsUpdate\AU and set the value to 1 (one).
+
+
+
+-----------
+
+
+Как отключить автоматические обновления Windows бесплатно и без SMS
+Одним из любимых занятий администраторов Windows является отключение автоматического обновления.
+Мы сейчас не будем касаться обоснованности и реальной необходимости такого шага, а остановимся на том, как это делается.
+А делается это, в лучшем случае, при помощи всяких сомнительных твиков и оптимизаторов, которые могут попутно и еще чего-нибудь отключить или «оптимизировать», в худшем случае берется г-сборка, где все это (и не только) уже заботливо вырезано.
+Но существует вполне легальный способ сделать это самостоятельно, тем более что инструкция опубликована на официальном сайте Microsoft.
+Да, это не шутка, компания подробно рассказывает, как можно заблокировать доступ к ее сервисам автоматического обновления.
+
+Доступны два пути: через групповые политики или реестр. Через политики проще, поэтому мы рассмотрим именно их.
+
+Открываем редактор политик (gpedit.msc) и переходим в
+
+Конфигурация компьютера – Административные шаблоны – Компоненты Windows – Центр обновления Windows и находим там следующие политики:
+Computer Configuration > Administrative Templates > Windows Components > Windows Update
+
+1. Не подключаться к расположениям Центра обновления Windows в Интернете
+   Do not connect to any Windows Update Internet locations
+
+ – переводим в состояние Включено.
+
+
+2. Запретить доступ для использования любых средств Центра обновления Windows – переводим в состояние Включено.
+   Turn off access to all Windows Update features
+
+3. Указать размещение службы обновлений Майкрософт в интрасети
+   Specify intranet Microsoft update service location
+ – переводим в состояние Включено, во все три поля с адресами служб обновления в интрасети вводим “ “ (пробел, обрамленный кавычками).
+
+
+Теперь переходим в Конфигурация пользователя – Административные шаблоны – Компоненты Windows – Центр обновления Windows
+И находим политику:
+▫️ Запретить использование любых средств Центра обновления Windows – которую переводим в состояние Включено, а значение политики устанавливаем в 0 – не отображать никакие уведомления.
+При активации данных политик будет не только отключено автоматическое обновление, но и перестанет работать Windows Store, так как он использует те же самые онлайн-службы, что и Windows Update.
+Также все магазинные приложения не будут доступны и через WinGet (которые имеют источник msstore).
+При этом, если какие-то обновления уже были скачаны на момент активации политик, то они будут установлены в обычном режиме.
+Потому что мы по факту не выключили механизм обновлений, а просто запретили доступ к онлайн-ресурсам Windows Update перенаправив запросы на несуществующий сервер WSUS.
+
+
+https://learn.microsoft.com/en-us/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#29-windows-update
