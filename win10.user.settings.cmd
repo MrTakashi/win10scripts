@@ -1,3 +1,6 @@
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
+REM
+
 REM [Customise user settings]
 
 REM Hide Search toolbar
