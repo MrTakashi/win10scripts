@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/office/C2R/install_my_settings.cmd | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/office/2013/C2R/install_my_settings.cmd | %SystemRoot%\System32\cmd.exe
 
 reg add "HKCU\Software\Microsoft\Office\15.0\Common\General" /v "DisableBootToOfficeStart" /t REG_DWORD /d 1 /f
 REM [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\General]
