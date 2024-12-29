@@ -6,5 +6,5 @@ curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/get.activated
 REM Execute script with Power Shell
 Start-Process -FilePath "$env:TEMP\get.activated.win.ps1" -Verb RunAs -Wait
 
-REM Clear up
+REM Remove temporary file
 Remove-Item "$env:TEMP\get.activated.win.ps1" -Force
