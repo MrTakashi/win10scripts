@@ -19,3 +19,15 @@
 ||ads-sg.tiktok.com^
 ||business-api.tiktok.com^
 ||ads.tiktok.com^
+
+||affiliationjs.s3.amazonaws.com^
+||advertising-api-eu.amazon.com^
+||pixel.facebook.com^
+||ads.facebook.com^
+||an.facebook.com^
+||widgets.pinterest.com^
+||business.samsungusa.com^
+||udc.yahoo.com^
+||udcm.yahoo.com^
+||log.fc.yahoo.com^
+||adtech.yahooinc.com^
