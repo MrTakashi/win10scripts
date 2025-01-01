@@ -1,4 +1,5 @@
 # Title: mk's adlist
+# https://raw.githubusercontent.com/MrTakashi/win10scripts/refs/heads/main/adlists/mk_ads.txt
 
 ||appmetrica.yandex.ru^
 ||metrika.yandex.ru^
