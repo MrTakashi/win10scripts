@@ -1,0 +1,21 @@
+# Title: mk's adlist
+
+||appmetrica.yandex.ru^
+||metrika.yandex.ru^
+||settings.crashlytics.com^
+||ads.yahoo.com^
+||analytics.google.com^
+||click.googleanalytics.com^
+||notify.bugsnag.com^
+||sessions.bugsnag.com^
+||api.bugsnag.com^
+||app.bugsnag.com^
+||browser.sentry-cdn.com^
+||app.getsentry.com^
+||pixel.facebook.com^
+||an.facebook.com^
+||ads.pinterest.com^
+||ads-api.tiktok.com^
+||ads-sg.tiktok.com^
+||business-api.tiktok.com^
+||ads.tiktok.com^
