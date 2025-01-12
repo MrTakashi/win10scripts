@@ -1,5 +1,5 @@
-# Title: mk's adlist
-# https://raw.githubusercontent.com/MrTakashi/win10scripts/refs/heads/main/adlists/mk_ads.txt
+! Title: mk's adlist
+! https://raw.githubusercontent.com/MrTakashi/win10scripts/refs/heads/main/adlists/mk_ads.txt
 
 ||appmetrica.yandex.ru^
 ||metrika.yandex.ru^
@@ -32,3 +32,8 @@
 ||udcm.yahoo.com^
 ||log.fc.yahoo.com^
 ||adtech.yahooinc.com^
+
+! More lists:
+! https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+! https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt
+! https://easylist-downloads.adblockplus.org/ruadlist+easylist.txt
