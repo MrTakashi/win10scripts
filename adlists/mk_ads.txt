@@ -1,39 +1,46 @@
 ! Title: mk's adlist
 ! https://raw.githubusercontent.com/MrTakashi/win10scripts/refs/heads/main/adlists/mk_ads.txt
 
-||appmetrica.yandex.ru^
-||metrika.yandex.ru^
-||settings.crashlytics.com^
-||ads.yahoo.com^
-||analytics.google.com^
-||click.googleanalytics.com^
-||notify.bugsnag.com^
-||sessions.bugsnag.com^
-||api.bugsnag.com^
-||app.bugsnag.com^
-||browser.sentry-cdn.com^
-||app.getsentry.com^
-||pixel.facebook.com^
-||an.facebook.com^
-||ads.pinterest.com^
-||ads-api.tiktok.com^
-||ads-sg.tiktok.com^
-||business-api.tiktok.com^
-||ads.tiktok.com^
+0.0.0.0 appmetrica.yandex.ru
+0.0.0.0 metrika.yandex.ru^
+0.0.0.0 settings.crashlytics.com^
+0.0.0.0 ads.yahoo.com^
+0.0.0.0 analytics.google.com^
+0.0.0.0 click.googleanalytics.com^
+0.0.0.0 notify.bugsnag.com^
+0.0.0.0 sessions.bugsnag.com^
+0.0.0.0 api.bugsnag.com^
+0.0.0.0 app.bugsnag.com^
+0.0.0.0 browser.sentry-cdn.com^
+0.0.0.0 app.getsentry.com^
+0.0.0.0 pixel.facebook.com^
+0.0.0.0 an.facebook.com^
+0.0.0.0 ads.pinterest.com^
+0.0.0.0 ads-api.tiktok.com^
+0.0.0.0 ads-sg.tiktok.com^
+0.0.0.0 business-api.tiktok.com^
+0.0.0.0 ads.tiktok.com^
 
-||affiliationjs.s3.amazonaws.com^
-||advertising-api-eu.amazon.com^
-||pixel.facebook.com^
-||ads.facebook.com^
-||an.facebook.com^
-||widgets.pinterest.com^
-||business.samsungusa.com^
-||udc.yahoo.com^
-||udcm.yahoo.com^
-||log.fc.yahoo.com^
-||adtech.yahooinc.com^
+0.0.0.0 affiliationjs.s3.amazonaws.com^
+0.0.0.0 advertising-api-eu.amazon.com^
+0.0.0.0 pixel.facebook.com^
+0.0.0.0 ads.facebook.com^
+0.0.0.0 an.facebook.com^
+0.0.0.0 widgets.pinterest.com^
+0.0.0.0 business.samsungusa.com^
+0.0.0.0 udc.yahoo.com^
+0.0.0.0 udcm.yahoo.com^
+0.0.0.0 log.fc.yahoo.com^
+0.0.0.0 adtech.yahooinc.com^
 
 ! More lists:
+!
+! Title: AdGuard DNS filter (https://github.com/AdguardTeam/AdGuardSDNSFilter)
 ! https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
-! https://adguardteam.github.io/HostlistsRegistry/assets/filter_33.txt
+!
+!
+! Title: Steven Black's List (https://github.com/StevenBlack/hosts)
+! https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+!
+! Title: Дополнительный региональный фильтр RU AdList к фильтру EasyList (https://adblockplus.org/ru/subscriptions)
 ! https://easylist-downloads.adblockplus.org/ruadlist+easylist.txt
