@@ -42,6 +42,32 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcon
 REM Disable App Notifications (System \ Notifications & actions \ Get notifications from apps and other senders)
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\PushNotifications" /t REG_DWORD /v ToastEnabled /d 0 /f
 
+
+REM Set solid color background: Black
+reg add "HKCU\Control Panel\Colors" /v Background /t REG_SZ /d "0 0 0" /f
+reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "" /f
+reg add "HKCU\Control Panel\Desktop" /v WallpaperStyle /t REG_SZ /d "0" /f
+reg add "HKCU\Control Panel\Desktop" /v TileWallpaper /t REG_SZ /d "0" /f
+
+REM Apply background change
+powershell -command "RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters"
+
+
+REM Set desktop wallpaper to D:\0000\wp.jpg
+REM reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "D:\0000\wp.jpg" /f
+
+REM Apply wallpaper change
+REM powershell -command "Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop\' -Name Wallpaper -Value 'D:\0000\wp.jpg'; RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters"
+
+
+REM Set sound scheme to 'No Sounds'
+reg add "HKCU\AppEvents\Schemes" /ve /t REG_SZ /d ".None" /f
+reg add "HKCU\AppEvents\Schemes\Apps\.Default\.Current" /ve /t REG_SZ /d ".None" /f
+
+REM Apply the sound scheme change
+powershell -command "Start-Process 'control.exe' -ArgumentList 'mmsys.cpl,,2' -WindowStyle Hidden"
+
+
 REM Restart Explorer to Apply Changes
 timeout /t 2 >nul
 taskkill /f /im explorer.exe
