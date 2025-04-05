@@ -1,7 +1,17 @@
 REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
-REM [Customise user settings]
+@echo off
+
+REM Check for admin privileges
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo This script needs to be run as Administrator.
+    pause
+    exit /b
+)
+
+echo Applying user customizations...
 
 REM Hide Search toolbar
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /t REG_DWORD /v SearchboxTaskbarMode /d 0 /f
@@ -13,7 +23,7 @@ REM Never combine Taskbar icons
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /t REG_DWORD /v TaskbarGlomLevel /d 2 /f
 
 REM Show all icons in tray
-reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer" /t REG_DWORD /v EnableAutoTray /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer" /t REG_DWORD /v EnableAutoTray /d 0 /f
 
 REM Add "This PC" icon on desktop
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel" /t REG_DWORD /v "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" /d 0 /f
@@ -32,11 +42,9 @@ REM reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktop
 REM Disable App Notifications (System \ Notifications & actions \ Get notifications from apps and other senders)
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\PushNotifications" /t REG_DWORD /v ToastEnabled /d 0 /f
 
-REM Hide user 'parent'
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList" /t REG_DWORD /f /d 0 /v parent
+REM Restart Explorer to Apply Changes
+timeout /t 2 >nul
+taskkill /f /im explorer.exe
+start explorer.exe
 
-echo "Press Enter to logoff..."
-
-pause
-
-logoff
+echo All changes applied.
