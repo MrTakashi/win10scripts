@@ -1,18 +1,6 @@
 REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
-@echo off
-
-REM Check for admin privileges
-net session >nul 2>&1
-if %errorlevel% neq 0 (
-    echo This script needs to be run as Administrator.
-    pause
-    exit /b
-)
-
-echo Applying user customizations...
-
 REM Hide Search toolbar
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" /t REG_DWORD /v SearchboxTaskbarMode /d 0 /f
 
