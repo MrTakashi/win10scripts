@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.TargetReleaseVersion.21H2.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
 REM TargetReleaseVersion to Windows 10 (21H2)
