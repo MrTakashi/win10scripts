@@ -1,3 +1,7 @@
+
+! OUTDATED !
+
+
 # win10scripts
 
 This repository contains my scripts tested with Windows 10 21H1 (19043)
