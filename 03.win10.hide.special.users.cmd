@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.hide.special.users.cmd | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/03.win10.hide.special.users.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
 REM Hide special users 'parent', 'adm'

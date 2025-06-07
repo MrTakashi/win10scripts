@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10.ltsc.kms.pru.cmd | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/20.win10.ltsc.kms.pru.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
 REM Setup KMS key and activate

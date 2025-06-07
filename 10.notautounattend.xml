@@ -14,6 +14,7 @@
 		<component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
 			<UserData>
 				<ProductKey>
+					<!-- GVLK (Generic Volume License Key) for Windows 10 Enterprise LTSC 2019/2021/2024 -->
 					<Key>M7XTQ-FN8P6-TTKYV-9D4CC-J462D</Key>
 					<WillShowUI>OnError</WillShowUI>
 				</ProductKey>
@@ -49,7 +50,7 @@
 				<!-- 	Disables automatic Windows Defender enrollment and Microsoft online protection settings. This is normal in corporate/automated setups.							-->
 				<!--	<ProtectYourPC>3</ProtectYourPC>-->
 
-				<!--	Skips the EULA acceptance screen. Useful in automated installs.			-->
+				<!--	Skips the EULA acceptance screen. Useful in automated installations.			-->
 				<HideEULAPage>true</HideEULAPage>
 
 				<!--	Skips Wi-Fi setup during OOBE (mostly for wired/desktop devices or kiosk setups).			-->
@@ -58,6 +59,15 @@
 				<!--	Bypasses Microsoft account creation screens in Windows 11+ and enforces local account creation. Especially important if you want to avoid being forced to sign in online.-->
 				<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
 			</OOBE>
+
+			<!--disables Cortana-->
+			<FirstLogonCommands>
+    			<SynchronousCommand wcm:action="add">
+      				<Order>1</Order>
+      				<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 0 /f</CommandLine>
+    			</SynchronousCommand>
+  			</FirstLogonCommands>
+
 		</component>
 	</settings>
 
