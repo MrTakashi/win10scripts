@@ -60,12 +60,42 @@
 				<HideOnlineAccountScreens>true</HideOnlineAccountScreens>
 			</OOBE>
 
-			<!--disables Cortana-->
 			<FirstLogonCommands>
+				<!--Disable Cortana -->
     			<SynchronousCommand wcm:action="add">
       				<Order>1</Order>
       				<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Windows Search" /v AllowCortana /t REG_DWORD /d 0 /f</CommandLine>
     			</SynchronousCommand>
+
+				<!-- Disable Privacy Experience -->
+				<SynchronousCommand wcm:action="add">
+        			<Order>2</Order>
+					<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\OOBE" /v DisablePrivacyExperience /t REG_DWORD /d 1 /f</CommandLine>
+      			</SynchronousCommand>
+
+				<!-- Disable telemetry -->
+				<SynchronousCommand wcm:action="add">
+        			<Order>3</Order>
+					<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v AllowTelemetry /t REG_DWORD /d 0 /f</CommandLine>
+      			</SynchronousCommand>
+
+				<!-- Disable Advertising ID -->
+				<SynchronousCommand wcm:action="add">
+        			<Order>4</Order>
+					<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" /v Enabled /t REG_DWORD /d 0 /f</CommandLine>
+				</SynchronousCommand>
+
+				<!-- Disable Advertising ID -->
+				<SynchronousCommand wcm:action="add">
+        			<Order>5</Order>
+					<CommandLine>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo" /v DisabledByGroupPolicy /t REG_DWORD /d 1 /f</CommandLine>
+      			</SynchronousCommand>
+
+				<!-- Disable Location -->
+				<SynchronousCommand wcm:action="add">
+        			<Order>6</Order>
+					<CommandLine>reg add "HKLM\SOFTWARE\Microsoft\MdmCommon\SettingValues" /v LocationSyncEnabled /t REG_DWORD /d 0 /f</CommandLine>
+      			</SynchronousCommand>
   			</FirstLogonCommands>
 
 		</component>
