@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/09.win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10/09.win10.user.settings.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
 REM Hide Search toolbar

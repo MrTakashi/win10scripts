@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/01.win10.disable.diagtrack.service.cmd | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10/01.win10.disable.diagtrack.service.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
 REM [Disable Windows data collection]
