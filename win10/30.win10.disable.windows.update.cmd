@@ -1,4 +1,4 @@
-REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10/30.win10.disable.windows.update | %SystemRoot%\System32\cmd.exe
+REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10/30.win10.disable.windows.update.cmd | %SystemRoot%\System32\cmd.exe
 REM
 
 REM
