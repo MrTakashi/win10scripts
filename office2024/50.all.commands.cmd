@@ -6,6 +6,8 @@ setup.exe /download configuration.xml
 setup.exe /configure configuration.xml
 
 REM Activate
-cd "C:\Program Files\Microsoft Office\Office16"
-cscript ospp.vbs /sethst:10.10.20.121
-cscript ospp.vbs /act
+cscript "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" /sethst:10.10.20.121
+cscript "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" /act
+
+REM Check status
+cscript "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" /dstatus
