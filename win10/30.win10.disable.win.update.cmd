@@ -2,7 +2,7 @@ REM curl https://raw.githubusercontent.com/MrTakashi/win10scripts/main/win10/30.
 REM
 
 REM Stop and disable "Windows Update Service"
-sc start wuauserv
+sc stop wuauserv
 sc config wuauserv start= disabled
 sc query wuauserv
 
